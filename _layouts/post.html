@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+  {% if page.video_id %}<p><a href="https://www.youtube.com/watch?v={{ page.video_id }}">Watch the video</a></p>{% endif %}
+  {{ content }}
+</article>
